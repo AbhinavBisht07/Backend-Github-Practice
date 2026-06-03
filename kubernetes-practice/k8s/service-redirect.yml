@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: redirect-server-service
+spec:
+  selector:
+    app: redirect-server
+  type: ClusterIP
+  ports:
+  - name: redirect-server-port
+    port: 80
+    targetPort: 8080
